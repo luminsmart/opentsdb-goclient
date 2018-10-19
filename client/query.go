@@ -73,6 +73,9 @@ type QueryParam struct {
 	// An optional value is used to show whether or not can be paased to the JSON with a POST to delete any data point
 	// that match the given query.
 	Delete bool `json:"delete,omitempty"`
+	
+	// An optional value used to set a timezone for calendar day downsampling
+	Timezone string `json:"timezone,omitempty"`
 }
 
 func (query *QueryParam) String() string {
